@@ -173,7 +173,7 @@ fun Feed() {
                 ) {
 
                     Image(
-                        painter = painterResource(id = R.drawable.foto), // Substitua pelo ID do avatar
+                        painter = painterResource(id = R.drawable.foto),
                         contentDescription = "foto",
                         modifier = Modifier
                             .size(28.dp)
