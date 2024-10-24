@@ -60,7 +60,7 @@ fun Feed() {
             .background(Color(0xFFE1ECF8))
             .padding(16.dp)
     ) {
-        // Header com logotipo e avatar
+
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -87,14 +87,13 @@ fun Feed() {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Barra de busca com botão de filtro
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .background(Color(0xFF73A7D4), shape = RoundedCornerShape(24.dp))
                 .padding(horizontal = 16.dp, vertical = 12.dp),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween // Para manter o botão de filtro à direita
+            horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically
@@ -104,7 +103,6 @@ fun Feed() {
                 Text(text = "Buscar", color = Color.Black)
             }
 
-            // Botão de filtro
             Icon(
                 imageVector = Icons.Filled.List,
                 contentDescription = "Filtrar",
@@ -117,18 +115,18 @@ fun Feed() {
 
         Row(
             modifier = Modifier
-                .padding(16.dp) // Adicione padding se necessário
+                .padding(16.dp)
         ) {
-            // Imagem ao lado do texto
+
             Image(
-                painter = painterResource(id = R.drawable.foto), // Substitua pelo ID da sua imagem
+                painter = painterResource(id = R.drawable.foto),
                 contentDescription = "Descrição da imagem",
                 modifier = Modifier
-                    .size(28    .dp) // Tamanho da imagem
-                    .padding(end = 8.dp) // Espaço entre a imagem e o texto
+                    .size(28    .dp)
+                    .padding(end = 8.dp)
             )
 
-            // Texto
+
             Text(
                 text = "Dicas bbbbbbbb",
                 fontSize = 18.sp,
@@ -144,7 +142,7 @@ fun Feed() {
             contentAlignment = Alignment.Center
         ) {
             Icon(
-                painter = painterResource(id = R.drawable.ic_play), // Ícone de play
+                painter = painterResource(id = R.drawable.ic_play),
                 contentDescription = null,
                 tint = Color(0xFF1D4FCF),
                 modifier = Modifier.size(64.dp)
@@ -173,7 +171,7 @@ fun Feed() {
                         .padding(horizontal = 16.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    // Imagem do avatar
+
                     Image(
                         painter = painterResource(id = R.drawable.foto), // Substitua pelo ID do avatar
                         contentDescription = "foto",
@@ -182,11 +180,11 @@ fun Feed() {
                             .background(Color(0xFFE1ECF8), CircleShape)
                     )
 
-                    // Utilize uma Column para empilhar os Textos verticalmente
+
                     Column(
                         modifier = Modifier
                             .weight(1f)
-                            .padding(start = 8.dp), // Adiciona um espaço entre a imagem e o texto
+                            .padding(start = 8.dp),
                         verticalArrangement = Arrangement.Center
                     ) {
                         Text(text = "José Silva")
